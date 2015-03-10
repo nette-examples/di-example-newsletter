@@ -1,0 +1,4 @@
+services:
+	- FileLogger( log.txt )
+	- SendMailMailer
+	- NewsletterManager
