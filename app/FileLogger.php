@@ -2,16 +2,17 @@
 
 class FileLogger implements Logger
 {
-	private $file;
+	private string $file;
 
-	function __construct($file)
+
+	public function __construct(string $file)
 	{
 		$this->file = $file;
 	}
 
-	function log($message)
+
+	public function log(string $message): void
 	{
 		file_put_contents($this->file, $message . "\n", FILE_APPEND);
 	}
-
 }

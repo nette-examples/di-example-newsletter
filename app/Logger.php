@@ -2,7 +2,5 @@
 
 interface Logger
 {
-
-	function log($message);
-
+	function log(string $message): void;
 }

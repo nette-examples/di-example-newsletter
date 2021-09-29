@@ -2,6 +2,6 @@
 
 class Mail
 {
-	public $subject;
-	public $message;
+	public string $subject;
+	public string $message;
 }

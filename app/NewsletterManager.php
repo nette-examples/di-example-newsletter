@@ -2,23 +2,26 @@
 
 class NewsletterManager
 {
-	private $mailer;
-	private $logger;
+	private Mailer $mailer;
+	private Logger $logger;
 
-	function __construct(Mailer $mailer, Logger $logger)
+
+	public function __construct(Mailer $mailer, Logger $logger)
 	{
 		$this->mailer = $mailer;
 		$this->logger = $logger;
 	}
 
-	function distribute(array $recipients)
+
+	public function distribute(array $recipients): void
 	{
 		$mail = new Mail;
-		// ...
+		$mail->subject = '...';
+		$mail->message = '...';
+
 		foreach ($recipients as $recipient) {
 			$this->mailer->send($mail, $recipient);
 		}
 		$this->logger->log('...');
 	}
-
 }

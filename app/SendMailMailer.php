@@ -2,10 +2,8 @@
 
 class SendMailMailer implements Mailer
 {
-
-	function send(Mail $mail, $to)
+	public function send(Mail $mail, string $to): void
 	{
 		mail($to, $mail->subject, $mail->message);
 	}
-
 }
