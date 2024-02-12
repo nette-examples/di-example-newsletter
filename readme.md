@@ -27,7 +27,7 @@ php example.php
 PHP Requirements
 ----------------
 
-Ensure your environment runs PHP version 8.0.
+Ensure your environment runs PHP version 8.1.
 
 
 Using the Application
